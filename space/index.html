@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Reagent X Laboratories" />
+    <link rel="icon" href="" type="image/x-icon"/>
+    <link rel="shortcut icon" " type="image/x-icon"/>
+    <title>Welcome To Space</title>
+    <link href="http://www.spaceheadconcepts.com/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="shooting-stars"></div>
+   
+</div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.reagentx.net/space/res/shootingstars.js"></script>
+    <script type="text/javascript">
+    (function($){
+      $( document ).ready( function(){
+        var shootingStarObj = new ShootingStar( ".shooting-stars" );
+            shootingStarObj.launch();
+        
+        $("input").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                $("form").submit();
+            }
+        });
+
+      });
+      })(jQuery);
+    </script>
+</body>
+</html>
